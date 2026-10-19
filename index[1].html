@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d16" />
+  <meta name="description" content="Joseph Itodo (Jentle) — Statistics student, aspiring software developer, and technology enthusiast." />
+  <meta property="og:title" content="Jentle — Joseph Itodo" />
+  <meta property="og:description" content="My journey in software development, statistics, and technology." />
+  <meta property="og:type" content="website" />
+  <title>Jentle | Joseph Itodo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#090d16;--panel:#111827;--line:#253044;--muted:#9aa7ba;--mint:#72f5c8;--blue:#72b7ff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:#eef3fb;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 8%,rgba(39,190,145,.13),transparent 34%),radial-gradient(ellipse at 90% 20%,rgba(68,127,240,.13),transparent 35%),linear-gradient(180deg,#090d16,#0b1220 60%,#090d16)}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .glass{background:rgba(17,24,39,.76);border:1px solid rgba(148,163,184,.16);backdrop-filter:blur(16px)}
+    .muted{color:var(--muted)} .accent{color:var(--mint)}
+    .gradient{background:linear-gradient(100deg,var(--mint),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--mint);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+    .eyebrow:before{content:'';width:24px;height:1px;background:var(--mint)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:13px 20px;font-weight:700;transition:.25s ease}
+    .btn-primary{color:#07120f;background:linear-gradient(100deg,var(--mint),#9af7dc)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 32px #72f5c82b}
+    .btn-outline{border:1px solid #43516a;color:#eef3fb}.btn-outline:hover{border-color:var(--mint);color:var(--mint);transform:translateY(-3px)}
+    .nav-link{color:#b6c0d0;font-size:.92rem;transition:color .2s}.nav-link:hover{color:var(--mint)}
+    .section{padding:100px 0}.section-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.045em;line-height:1.1}
+    .card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(19,28,44,.9),rgba(12,18,30,.9));border-radius:20px;transition:transform .25s,border-color .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-5px);border-color:#72f5c85c;box-shadow:0 18px 45px #0003}
+    .icon-box{height:44px;width:44px;display:grid;place-items:center;border:1px solid #72f5c82b;border-radius:13px;background:#72f5c80d;color:var(--mint);font-size:1.1rem}
+    .tag{display:inline-flex;border:1px solid #344258;border-radius:999px;padding:5px 10px;font-size:.78rem;color:#c3cede}
+    .timeline{position:relative;padding-left:25px}.timeline:before{content:'';position:absolute;left:5px;top:7px;bottom:8px;width:1px;background:#334155}
+    .timeline-item{position:relative;padding-bottom:28px}.timeline-item:last-child{padding-bottom:0}.timeline-item:before{content:'';position:absolute;left:-25px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px #72f5c817}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+    .profile-frame{position:relative;max-width:340px;margin:auto;aspect-ratio:4/5;border-radius:28px;border:1px solid #72f5c846;background:linear-gradient(145deg,#18332f,#101827 55%,#162746);overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .profile-frame:before{content:'';position:absolute;inset:14px;border:1px solid #ffffff18;border-radius:20px}
+    .profile-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:grayscale(100%);}
+    .profile-mark{font-family:'Space Grotesk',sans-serif;font-size:clamp(5rem,12vw,9rem);font-weight:700;letter-spacing:-.1em;color:#e9fff7;text-shadow:0 0 50px #72f5c83b}
+    .profile-caption{position:absolute;bottom:28px;left:26px;right:26px;padding:15px 17px;border-radius:14px;background:#090d16c9;border:1px solid #ffffff17;backdrop-filter:blur(12px)}
+    .stat{border-left:2px solid var(--mint);padding-left:15px}.stat strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem}
+    .skill-track{height:5px;background:#283448;border-radius:20px;overflow:hidden}.skill-fill{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--blue));border-radius:20px;transition:width 1s ease}
+    footer a:hover{color:var(--mint)}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero-copy{text-align:center}.hero-copy .eyebrow{justify-content:center}.hero-actions,.hero-socials{justify-content:center}.profile-frame{max-width:280px;aspect-ratio:1/1}.profile-caption{text-align:left}.section{padding:76px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+<style>
+
+/* Animated blue circuit-board hero background inspired by LogTechy's reference */
+#home, .hero-section {
+  position: relative; isolation: isolate; overflow: hidden; background: #020611;
+}
+#home::before, .hero-section::before {
+  content:""; position:absolute; inset:0; z-index:-2;
+  background: radial-gradient(circle at 16% 28%,rgba(0,105,255,.18),transparent 25%),
+              radial-gradient(circle at 82% 54%,rgba(0,160,255,.14),transparent 25%),
+              linear-gradient(135deg,#02040b,#030b1b 52%,#01040a);
+}
+#home::after, .hero-section::after {
+  content:""; position:absolute; inset:-12%; z-index:-1; pointer-events:none; opacity:.7;
+  background-image: linear-gradient(90deg,transparent 0 9%,rgba(0,75,255,.35) 9.2%,transparent 9.7%),
+    linear-gradient(0deg,transparent 0 22%,rgba(0,75,255,.25) 22.2%,transparent 22.8%),
+    linear-gradient(90deg,transparent 0 43%,rgba(0,145,255,.28) 43.2%,transparent 43.8%),
+    linear-gradient(0deg,transparent 0 66%,rgba(0,100,255,.25) 66.2%,transparent 66.8%);
+  background-size:260px 220px,310px 250px,360px 300px,280px 330px;
+  animation:jentleCircuitDrift 18s ease-in-out infinite;
+}
+@keyframes jentleCircuitDrift { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-15px,10px)} }
+.jentle-circuit-glow {
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:radial-gradient(circle at 10% 22%,rgba(0,145,255,.55) 0 2px,transparent 6px),
+    radial-gradient(circle at 76% 31%,rgba(0,175,255,.42) 0 2px,transparent 7px),
+    radial-gradient(circle at 25% 70%,rgba(0,100,255,.4) 0 3px,transparent 9px),
+    radial-gradient(circle at 90% 80%,rgba(0,145,255,.38) 0 2px,transparent 7px);
+}
+.typewriter-role { color:#ffc247; font-weight:700; display:inline-block; min-height:1.5em;
+  border-right:3px solid #ffc247; padding-right:.12em; white-space:nowrap; vertical-align:bottom;
+  animation:jentleCaret .8s steps(1) infinite; }
+@keyframes jentleCaret { 50%{border-color:transparent} }
+@media(prefers-reduced-motion:reduce){#home::after,.hero-section::after,.typewriter-role{animation:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#090d16]/85 backdrop-blur-xl">
+    <nav class="wrap flex h-[76px] items-center justify-between" aria-label="Main navigation">
+      <a href="#home" class="brand text-2xl font-bold tracking-tight">Jentle<span class="accent">.</span></a>
+      <div class="hidden md:flex items-center gap-7">
+        <a class="nav-link" href="#about">About</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#journey">Journey</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#contact">Contact</a>
+      </div>
+      <a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="hidden md:inline-flex btn btn-outline !py-2.5 !px-4 text-sm">GitHub <i class="fa-brands fa-github"></i></a>
+      <button id="menuButton" class="md:hidden text-xl p-2" aria-label="Open navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden wrap pb-4">
+      <div class="grid gap-1 rounded-2xl border border-white/10 bg-[#111827] p-3">
+        <a class="nav-link p-2" href="#about">About</a><a class="nav-link p-2" href="#skills">Skills</a><a class="nav-link p-2" href="#journey">Journey</a><a class="nav-link p-2" href="#projects">Projects</a><a class="nav-link p-2" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="min-h-screen flex items-center pt-28 pb-16 hero-section relative">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">A little about me</span>
+          <p class="mt-7 text-xl muted">Hello, I'm</p>
+          <h1 class="mt-1 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-[-.06em] leading-[1.02]">Joseph <span class="gradient">Itodo.</span></h1>
+          <h2 class="mt-5 text-xl sm:text-2xl font-medium text-slate-200">Statistics student <span class="muted">·</span> Aspiring software developer</h2>
+          <p class="mt-6 max-w-xl text-base sm:text-lg leading-8 muted mx-auto md:mx-0">I’m a technology enthusiast learning to turn ideas into useful digital experiences. I’m interested in software development, data, and building projects that solve real problems.</p>
+          <div class="hero-actions mt-8 flex flex-wrap gap-3">
+            <a class="btn btn-primary" href="#projects">Explore my projects <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero-socials mt-8 flex items-center gap-5 text-xl text-slate-400">
+            <a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" aria-label="GitHub" class="hover:text-emerald-300"><i class="fa-brands fa-github"></i></a>
+            <a href="https://jentle.me" aria-label="Jentle website" class="hover:text-emerald-300"><i class="fa-solid fa-globe"></i></a>
+            <span class="text-sm muted">Based in Nigeria</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="profile-frame">
+            <img class="profile-photo" src="profile.jpg" alt="Portrait of Joseph Itodo (Jentle)" />
+            <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(180deg,transparent 45%,rgba(9,13,22,.28) 70%,rgba(9,13,22,.7) 100%)"></div>
+            <div class="profile-caption"><p class="font-semibold">Joseph Itodo <span class="accent">/ Jentle</span></p><p class="mt-1 text-sm muted">Learning · Building · Improving</p></div>
+          </div>
+          <p class="mt-4 text-center text-xs muted">A personal portfolio of my learning and projects</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section border-y border-white/5 bg-white/[.015]">
+      <div class="wrap grid md:grid-cols-[.8fr_1.2fr] gap-12 items-start">
+        <div class="reveal"><span class="eyebrow">Who I am</span><h2 class="section-title mt-5">Curious by nature.<br><span class="gradient">Building with purpose.</span></h2></div>
+        <div class="reveal">
+          <p class="hero-role-line text-xl md:text-2xl mb-6"><span class="typewriter-role" id="jentle-typewriter">Data Analyst</span></p>
+          <p class="mt-5 leading-8 muted">My interests bring together technology, programming, and data. I enjoy learning through hands-on projects, exploring how digital products work, and improving my skills one step at a time. This site is where I share that journey and the things I build along the way.</p>
+          <div class="mt-8 grid grid-cols-2 gap-5 sm:gap-8">
+            <div class="stat"><strong>Learn</strong><span class="text-sm muted">Keep exploring new tools</span></div>
+            <div class="stat"><strong>Build</strong><span class="text-sm muted">Turn ideas into projects</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="max-w-2xl reveal"><span class="eyebrow">What I'm learning</span><h2 class="section-title mt-5">Skills & <span class="gradient">tools.</span></h2><p class="mt-5 leading-7 muted">My toolkit is a work in progress. These are areas I’m studying or exploring; I’ll update this section as I gain practical experience.</p></div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-brands fa-java"></i></div><h3 class="mt-5 text-xl font-semibold">Programming</h3><p class="mt-2 text-sm leading-6 muted">Java fundamentals and learning to write clear, maintainable code.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Java</span><span class="tag">Problem solving</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-code"></i></div><h3 class="mt-5 text-xl font-semibold">Web development</h3><p class="mt-2 text-sm leading-6 muted">Building and customizing web pages while learning front-end fundamentals.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-chart-line"></i></div><h3 class="mt-5 text-xl font-semibold">Statistics & data</h3><p class="mt-2 text-sm leading-6 muted">Applying statistical concepts to interpret information and answer questions.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Statistics</span><span class="tag">Data analysis</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-brands fa-git-alt"></i></div><h3 class="mt-5 text-xl font-semibold">Developer tools</h3><p class="mt-2 text-sm leading-6 muted">Learning version control and working with development environments.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-database"></i></div><h3 class="mt-5 text-xl font-semibold">Databases</h3><p class="mt-2 text-sm leading-6 muted">Studying how applications store, organize, and retrieve information.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">SQL</span><span class="tag">Database concepts</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-lightbulb"></i></div><h3 class="mt-5 text-xl font-semibold">Building & learning</h3><p class="mt-2 text-sm leading-6 muted">Learning by experimenting, troubleshooting, documenting, and iterating.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Research</span><span class="tag">Experimentation</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section border-y border-white/5 bg-white/[.015]">
+      <div class="wrap grid md:grid-cols-2 gap-12">
+        <div class="reveal"><span class="eyebrow">My background</span><h2 class="section-title mt-5">Education & <span class="gradient">journey.</span></h2><p class="mt-5 leading-7 muted">I’m building my foundation through university studies, structured learning, and personal projects.</p></div>
+        <div class="card p-7 sm:p-9 reveal"><h3 class="text-xl font-semibold mb-7"><i class="fa-solid fa-graduation-cap accent mr-3"></i>Education</h3><div class="timeline"><div class="timeline-item"><p class="text-sm accent font-semibold">Current studies</p><h4 class="mt-1 text-lg font-semibold">B.Sc. Statistics</h4><p class="mt-1 muted">Federal University of Lafia, Nigeria</p><p class="mt-2 text-sm muted">Studying statistics, probability, and quantitative methods.</p></div><div class="timeline-item"><p class="text-sm accent font-semibold">Ongoing</p><h4 class="mt-1 text-lg font-semibold">Software development learning</h4><p class="mt-1 muted">Independent practice and online coursework</p><p class="mt-2 text-sm muted">Developing programming and database fundamentals through practice.</p></div></div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="wrap">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 reveal"><div><span class="eyebrow">Selected work</span><h2 class="section-title mt-5">Projects I'm <span class="gradient">building.</span></h2><p class="mt-4 max-w-2xl leading-7 muted">A selection of personal projects and experiments. Some are works in progress, and I’ll add more as they become ready to share.</p></div><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="btn btn-outline self-start">View GitHub <i class="fa-brands fa-github"></i></a></div>
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="card p-6 flex flex-col reveal"><div class="flex items-center justify-between"><div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div><span class="tag">Bot project</span></div><h3 class="mt-5 text-xl font-semibold">JentleBot</h3><p class="mt-3 text-sm leading-6 muted flex-1">A WhatsApp bot project exploring automation, bot features, and JavaScript-based development.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Node.js</span><span class="tag">JavaScript</span></div><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold accent">Explore on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+          <article class="card p-6 flex flex-col reveal"><div class="flex items-center justify-between"><div class="icon-box"><i class="fa-solid fa-book-open"></i></div><span class="tag">Web project</span></div><h3 class="mt-5 text-xl font-semibold">Jenpedia</h3><p class="mt-3 text-sm leading-6 muted flex-1">A micro-app idea focused on useful information and web-based tools.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Web</span><span class="tag">Product idea</span></div><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold accent">Explore on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+          <article class="card p-6 flex flex-col reveal"><div class="flex items-center justify-between"><div class="icon-box"><i class="fa-solid fa-globe"></i></div><span class="tag">Portfolio</span></div><h3 class="mt-5 text-xl font-semibold">Jentle.me</h3><p class="mt-3 text-sm leading-6 muted flex-1">My personal website for documenting my learning journey, interests, and future projects.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div><a href="https://jentle.me" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold accent">You're here <i class="fa-solid fa-arrow-right"></i></a></article>
+        </div>
+        <p class="mt-5 text-xs muted">Project descriptions reflect current interests and learning work. Add direct repository links when each project has a public repository.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section border-t border-white/5 bg-white/[.015]">
+      <div class="wrap">
+        <div class="card p-8 sm:p-12 lg:p-16 grid md:grid-cols-[1fr_auto] gap-8 items-center reveal">
+          <div><span class="eyebrow">Say hello</span><h2 class="section-title mt-5">Have an idea? <span class="gradient">Let's connect.</span></h2><p class="mt-5 max-w-2xl leading-7 muted">I'm open to connecting with fellow learners, developers, and people interested in technology, programming, or data. Reach out through GitHub for now.</p></div>
+          <a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="btn btn-primary whitespace-nowrap">Connect on GitHub <i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-7">
+    <div class="wrap flex flex-col sm:flex-row gap-4 items-center justify-between text-sm muted"><a href="#home" class="brand text-xl font-bold text-slate-100">Jentle<span class="accent">.</span></a><p>© <span id="year"></span> Joseph Itodo. Built with curiosity and code.</p><div class="flex gap-5"><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer">GitHub</a><a href="#home">Back to top ↑</a></div></div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden'); menuButton.setAttribute('aria-expanded','false'); menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+<script>
+(() => {
+ const el=document.getElementById('jentle-typewriter');
+ if(!el || el.dataset.ready==='true') return;
+ el.dataset.ready='true';
+ const roles=['Data Analyst','Full Stack Developer','Cyber Security Analyst'];
+ let roleIndex=0, charIndex=roles[0].length, deleting=true;
+ function tick(){
+  const role=roles[roleIndex];
+  if(!deleting){charIndex++;el.textContent=role.slice(0,charIndex);
+   if(charIndex>=role.length){deleting=true;setTimeout(tick,1300);return;}
+   setTimeout(tick,85);
+  }else{charIndex--;el.textContent=role.slice(0,charIndex);
+   if(charIndex<=0){deleting=false;roleIndex=(roleIndex+1)%roles.length;}
+   setTimeout(tick,45);
+  }
+ }
+ setTimeout(tick,1300);
+})();
+</script>
+
+</body>
+</html>
