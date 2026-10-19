@@ -1,785 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello, I'm Joseph Itodo</title>
-    <meta name="description" content="A modern dark portfolio template inspired by the Northern Lights with comprehensive sections and smooth animations">
-    <meta property="og:title" content="Aurora Portfolio Template">
-    <meta property="og:description" content="A Northern Lights inspired portfolio template with dark mode aesthetic">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'aurora-green': '#00ffaa',
-                        'aurora-blue': '#00aaff',
-                        'aurora-purple': '#aa00ff',
-                        'aurora-pink': '#ff00aa',
-                        'dark-bg': '#0a0e1a',
-                        'dark-card': '#1a1f2e',
-                        'dark-border': '#2a2f3e'
-                    },
-                    animation: {
-                        'aurora': 'aurora 15s ease-in-out infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s ease-in-out infinite',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'glow': 'glow 2s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        aurora: {
-                            '0%, 100%': {
-                                backgroundPosition: '0% 50%',
-                                backgroundSize: '200% 200%'
-                            },
-                            '50%': {
-                                backgroundPosition: '100% 50%',
-                                backgroundSize: '200% 200%'
-                            }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        glow: {
-                            '0%, 100%': {
-                                boxShadow: '0 0 5px rgba(0, 255, 170, 0.5), 0 0 20px rgba(0, 255, 170, 0.3)'
-                            },
-                            '50%': {
-                                boxShadow: '0 0 20px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.4)'
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Aurora gradient background */
-        .aurora-bg {
-            background: linear-gradient(-45deg, #0a0e1a, #1a0033, #002244, #001a33);
-            background-size: 400% 400%;
-            animation: aurora 15s ease infinite;
-        }
-
-        /* Aurora light effect overlay */
-        .aurora-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100vh;
-            background:
-                radial-gradient(ellipse at top left, rgba(0, 255, 170, 0.15) 0%, transparent 40%),
-                radial-gradient(ellipse at top right, rgba(0, 170, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(ellipse at bottom left, rgba(170, 0, 255, 0.1) 0%, transparent 40%),
-                radial-gradient(ellipse at bottom right, rgba(255, 0, 170, 0.1) 0%, transparent 40%);
-            pointer-events: none;
-            opacity: 0.7;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0a0e1a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #00ffaa, #00aaff);
-            border-radius: 5px;
-        }
-
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #00ffaa 0%, #00aaff 50%, #aa00ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Card hover effect */
-        .card-hover {
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .card-hover:hover {
-            border-color: #00ffaa;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 170, 0.2);
-        }
-
-        /* Progress bar animation */
-        @keyframes progressAnimation {
-            0% { width: 0%; }
-        }
-
-        .progress-bar {
-            animation: progressAnimation 2s ease-out forwards;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d16" />
+  <meta name="description" content="Joseph Itodo (Jentle) — Statistics student, aspiring software developer, and technology enthusiast." />
+  <meta property="og:title" content="Jentle — Joseph Itodo" />
+  <meta property="og:description" content="My journey in software development, statistics, and technology." />
+  <meta property="og:type" content="website" />
+  <title>Jentle | Joseph Itodo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#090d16;--panel:#111827;--line:#253044;--muted:#9aa7ba;--mint:#72f5c8;--blue:#72b7ff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:#eef3fb;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 8%,rgba(39,190,145,.13),transparent 34%),radial-gradient(ellipse at 90% 20%,rgba(68,127,240,.13),transparent 35%),linear-gradient(180deg,#090d16,#0b1220 60%,#090d16)}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .glass{background:rgba(17,24,39,.76);border:1px solid rgba(148,163,184,.16);backdrop-filter:blur(16px)}
+    .muted{color:var(--muted)} .accent{color:var(--mint)}
+    .gradient{background:linear-gradient(100deg,var(--mint),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--mint);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+    .eyebrow:before{content:'';width:24px;height:1px;background:var(--mint)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:13px 20px;font-weight:700;transition:.25s ease}
+    .btn-primary{color:#07120f;background:linear-gradient(100deg,var(--mint),#9af7dc)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 32px #72f5c82b}
+    .btn-outline{border:1px solid #43516a;color:#eef3fb}.btn-outline:hover{border-color:var(--mint);color:var(--mint);transform:translateY(-3px)}
+    .nav-link{color:#b6c0d0;font-size:.92rem;transition:color .2s}.nav-link:hover{color:var(--mint)}
+    .section{padding:100px 0}.section-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.045em;line-height:1.1}
+    .card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(19,28,44,.9),rgba(12,18,30,.9));border-radius:20px;transition:transform .25s,border-color .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-5px);border-color:#72f5c85c;box-shadow:0 18px 45px #0003}
+    .icon-box{height:44px;width:44px;display:grid;place-items:center;border:1px solid #72f5c82b;border-radius:13px;background:#72f5c80d;color:var(--mint);font-size:1.1rem}
+    .tag{display:inline-flex;border:1px solid #344258;border-radius:999px;padding:5px 10px;font-size:.78rem;color:#c3cede}
+    .timeline{position:relative;padding-left:25px}.timeline:before{content:'';position:absolute;left:5px;top:7px;bottom:8px;width:1px;background:#334155}
+    .timeline-item{position:relative;padding-bottom:28px}.timeline-item:last-child{padding-bottom:0}.timeline-item:before{content:'';position:absolute;left:-25px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px #72f5c817}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+    .profile-frame{position:relative;max-width:340px;margin:auto;aspect-ratio:4/5;border-radius:28px;border:1px solid #72f5c846;background:linear-gradient(145deg,#18332f,#101827 55%,#162746);overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .profile-frame:before{content:'';position:absolute;inset:14px;border:1px solid #ffffff18;border-radius:20px}
+    .profile-mark{font-family:'Space Grotesk',sans-serif;font-size:clamp(5rem,12vw,9rem);font-weight:700;letter-spacing:-.1em;color:#e9fff7;text-shadow:0 0 50px #72f5c83b}
+    .profile-caption{position:absolute;bottom:28px;left:26px;right:26px;padding:15px 17px;border-radius:14px;background:#090d16c9;border:1px solid #ffffff17;backdrop-filter:blur(12px)}
+    .stat{border-left:2px solid var(--mint);padding-left:15px}.stat strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem}
+    .skill-track{height:5px;background:#283448;border-radius:20px;overflow:hidden}.skill-fill{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--blue));border-radius:20px;transition:width 1s ease}
+    footer a:hover{color:var(--mint)}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero-copy{text-align:center}.hero-copy .eyebrow{justify-content:center}.hero-actions,.hero-socials{justify-content:center}.profile-frame{max-width:280px;aspect-ratio:1/1}.profile-caption{text-align:left}.section{padding:76px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
-<body class="bg-dark-bg text-gray-200 aurora-bg">
-    <!-- Aurora overlay effect -->
-    <div class="aurora-overlay"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-md border-b border-dark-border z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold gradient-text">Jentle</div>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="#home" class="hover:text-aurora-green transition">Home</a></li>
-                    <li><a href="#about" class="hover:text-aurora-green transition">About</a></li>
-                    <li><a href="#experience" class="hover:text-aurora-green transition">Experience</a></li>
-                    <li><a href="#skills" class="hover:text-aurora-green transition">Skills</a></li>
-                    <li><a href="#services" class="hover:text-aurora-green transition">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-aurora-green transition">Portfolio</a></li>
-                    <li><a href="#testimonials" class="hover:text-aurora-green transition">Testimonials</a></li>
-                    <li><a href="#blog" class="hover:text-aurora-green transition">Blog</a></li>
-                    <li><a href="#contact" class="hover:text-aurora-green transition">Contact</a></li>
-                </ul>
-                <!-- Mobile menu button -->
-                <button class="md:hidden" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-            <!-- Mobile menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="#home" class="block py-2 hover:text-aurora-green">Home</a>
-                <a href="#about" class="block py-2 hover:text-aurora-green">About</a>
-                <a href="#experience" class="block py-2 hover:text-aurora-green">Experience</a>
-                <a href="#skills" class="block py-2 hover:text-aurora-green">Skills</a>
-                <a href="#services" class="block py-2 hover:text-aurora-green">Services</a>
-                <a href="#portfolio" class="block py-2 hover:text-aurora-green">Portfolio</a>
-                <a href="#testimonials" class="block py-2 hover:text-aurora-green">Testimonials</a>
-                <a href="#blog" class="block py-2 hover:text-aurora-green">Blog</a>
-                <a href="#contact" class="block py-2 hover:text-aurora-green">Contact</a>
-            </div>
-        </div>
+<body>
+  <div class="ambient"></div>
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#090d16]/85 backdrop-blur-xl">
+    <nav class="wrap flex h-[76px] items-center justify-between" aria-label="Main navigation">
+      <a href="#home" class="brand text-2xl font-bold tracking-tight">Jentle<span class="accent">.</span></a>
+      <div class="hidden md:flex items-center gap-7">
+        <a class="nav-link" href="#about">About</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#journey">Journey</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#contact">Contact</a>
+      </div>
+      <a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="hidden md:inline-flex btn btn-outline !py-2.5 !px-4 text-sm">GitHub <i class="fa-brands fa-github"></i></a>
+      <button id="menuButton" class="md:hidden text-xl p-2" aria-label="Open navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </nav>
+    <div id="mobileMenu" class="hidden md:hidden wrap pb-4">
+      <div class="grid gap-1 rounded-2xl border border-white/10 bg-[#111827] p-3">
+        <a class="nav-link p-2" href="#about">About</a><a class="nav-link p-2" href="#skills">Skills</a><a class="nav-link p-2" href="#journey">Journey</a><a class="nav-link p-2" href="#projects">Projects</a><a class="nav-link p-2" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative">
-        <div class="container mx-auto px-6 text-center z-10">
-            <div class="animate-slide-up">
-                <h1 class="text-5xl md:text-7xl font-bold mb-4">
-                    Hello, I'm <span class="gradient-text">Joseph Itodo</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-400 mb-8">Full-Stack Developer | Data Analyst | Tech Innovator</p>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
-                    Crafting digital experiences that illuminate the web like the Northern Lights.
-                    Passionate about cutting-edge technology and beautiful, functional design.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#portfolio" class="px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-full text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
-                        View My Work
-                    </a>
-                    <a href="resume.pdf" class="px-8 py-3 border-2 border-aurora-green rounded-full hover:bg-aurora-green hover:text-dark-bg transition transform hover:scale-105">
-                        Download CV
-                    </a>
-                </div>
-                <div class="mt-12 flex justify-center space-x-6">
-                    <a href="#" class="text-2xl hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+  <main>
+    <section id="home" class="min-h-screen flex items-center pt-28 pb-16">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">A little about me</span>
+          <p class="mt-7 text-xl muted">Hello, I'm</p>
+          <h1 class="mt-1 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-[-.06em] leading-[1.02]">Joseph <span class="gradient">Itodo.</span></h1>
+          <h2 class="mt-5 text-xl sm:text-2xl font-medium text-slate-200">Statistics student <span class="muted">·</span> Aspiring software developer</h2>
+          <p class="mt-6 max-w-xl text-base sm:text-lg leading-8 muted mx-auto md:mx-0">I’m a technology enthusiast learning to turn ideas into useful digital experiences. I’m interested in software development, data, and building projects that solve real problems.</p>
+          <div class="hero-actions mt-8 flex flex-wrap gap-3">
+            <a class="btn btn-primary" href="#projects">Explore my projects <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero-socials mt-8 flex items-center gap-5 text-xl text-slate-400">
+            <a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" aria-label="GitHub" class="hover:text-emerald-300"><i class="fa-brands fa-github"></i></a>
+            <a href="https://jentle.me" aria-label="Jentle website" class="hover:text-emerald-300"><i class="fa-solid fa-globe"></i></a>
+            <span class="text-sm muted">Based in Nigeria</span>
+          </div>
         </div>
-        <!-- Animated particles -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute w-2 h-2 bg-aurora-green rounded-full animate-float" style="top: 20%; left: 10%;"></div>
-            <div class="absolute w-2 h-2 bg-aurora-blue rounded-full animate-float" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
-            <div class="absolute w-2 h-2 bg-aurora-purple rounded-full animate-float" style="top: 40%; left: 60%; animation-delay: 2s;"></div>
-            <div class="absolute w-2 h-2 bg-aurora-pink rounded-full animate-float" style="top: 80%; left: 30%; animation-delay: 3s;"></div>
+        <div class="reveal">
+          <div class="profile-frame">
+            <div class="absolute inset-0 opacity-40" style="background:radial-gradient(circle at 50% 35%,#72f5c83b,transparent 45%),radial-gradient(circle at 70% 75%,#72b7ff2b,transparent 40%)"></div>
+            <div class="profile-mark relative">JI<span class="accent">.</span></div>
+            <div class="profile-caption"><p class="font-semibold">Joseph Itodo <span class="accent">/ Jentle</span></p><p class="mt-1 text-sm muted">Learning · Building · Improving</p></div>
+          </div>
+          <p class="mt-4 text-center text-xs muted">A personal portfolio of my learning and projects</p>
         </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <p class="text-gray-400 leading-relaxed">
-                        With over 5 years of experience in web development and design, I specialize in creating
-                        immersive digital experiences that captivate users and drive business growth.
-                    </p>
-                    <p class="text-gray-400 leading-relaxed">
-                        My journey began with a fascination for the intersection of art and technology. Today,
-                        I work with cutting-edge technologies to build scalable, performant applications that
-                        push the boundaries of what's possible on the web.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-4">
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-green">100+</div>
-                            <div class="text-sm text-gray-400">Projects Completed</div>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-blue">50+</div>
-                            <div class="text-sm text-gray-400">Happy Clients</div>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-purple">7+</div>
-                            <div class="text-sm text-gray-400">Years Experience</div>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-pink">15+</div>
-                            <div class="text-sm text-gray-400">Awards Won</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-aurora-green via-aurora-blue to-aurora-purple p-1">
-                        <div class="w-full h-full rounded-full bg-dark-bg flex items-center justify-center">
-                            <span class="text-6xl">👨‍💻</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="about" class="section border-y border-white/5 bg-white/[.015]">
+      <div class="wrap grid md:grid-cols-[.8fr_1.2fr] gap-12 items-start">
+        <div class="reveal"><span class="eyebrow">Who I am</span><h2 class="section-title mt-5">Curious by nature.<br><span class="gradient">Building with purpose.</span></h2></div>
+        <div class="reveal">
+          <p class="text-lg leading-8 text-slate-300">I’m Joseph Itodo, also known as Jentle. I study Statistics at the Federal University of Lafia, and I’m working towards becoming a software developer.</p>
+          <p class="mt-5 leading-8 muted">My interests bring together technology, programming, and data. I enjoy learning through hands-on projects, exploring how digital products work, and improving my skills one step at a time. This site is where I share that journey and the things I build along the way.</p>
+          <div class="mt-8 grid grid-cols-2 gap-5 sm:gap-8">
+            <div class="stat"><strong>Learn</strong><span class="text-sm muted">Keep exploring new tools</span></div>
+            <div class="stat"><strong>Build</strong><span class="text-sm muted">Turn ideas into projects</span></div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-dark-card/30">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div class="relative pl-8 border-l-2 border-aurora-green">
-                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-green rounded-full"></div>
-                    <div class="bg-dark-card p-6 rounded-lg card-hover">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-aurora-green">Senior Full-Stack Developer</h3>
-                            <span class="text-sm text-gray-400">2021 - Present</span>
-                        </div>
-                        <p class="text-gray-300 font-medium mb-2">Tech Innovations Inc.</p>
-                        <p class="text-gray-400">
-                            Lead development of enterprise-scale web applications, mentor junior developers,
-                            and architect cloud-native solutions using modern tech stacks.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 border-l-2 border-aurora-blue">
-                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-blue rounded-full"></div>
-                    <div class="bg-dark-card p-6 rounded-lg card-hover">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-aurora-blue">Full-Stack Developer</h3>
-                            <span class="text-sm text-gray-400">2019 - 2021</span>
-                        </div>
-                        <p class="text-gray-300 font-medium mb-2">Digital Solutions Agency</p>
-                        <p class="text-gray-400">
-                            Developed custom web applications for various clients, implemented responsive designs,
-                            and optimized application performance.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 border-l-2 border-aurora-purple">
-                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-purple rounded-full"></div>
-                    <div class="bg-dark-card p-6 rounded-lg card-hover">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-aurora-purple">Frontend Developer</h3>
-                            <span class="text-sm text-gray-400">2017 - 2019</span>
-                        </div>
-                        <p class="text-gray-300 font-medium mb-2">Creative Web Studio</p>
-                        <p class="text-gray-400">
-                            Created interactive user interfaces, implemented design mockups, and ensured
-                            cross-browser compatibility for client projects.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="max-w-2xl reveal"><span class="eyebrow">What I'm learning</span><h2 class="section-title mt-5">Skills & <span class="gradient">tools.</span></h2><p class="mt-5 leading-7 muted">My toolkit is a work in progress. These are areas I’m studying or exploring; I’ll update this section as I gain practical experience.</p></div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-brands fa-java"></i></div><h3 class="mt-5 text-xl font-semibold">Programming</h3><p class="mt-2 text-sm leading-6 muted">Java fundamentals and learning to write clear, maintainable code.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Java</span><span class="tag">Problem solving</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-code"></i></div><h3 class="mt-5 text-xl font-semibold">Web development</h3><p class="mt-2 text-sm leading-6 muted">Building and customizing web pages while learning front-end fundamentals.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-chart-line"></i></div><h3 class="mt-5 text-xl font-semibold">Statistics & data</h3><p class="mt-2 text-sm leading-6 muted">Applying statistical concepts to interpret information and answer questions.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Statistics</span><span class="tag">Data analysis</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-brands fa-git-alt"></i></div><h3 class="mt-5 text-xl font-semibold">Developer tools</h3><p class="mt-2 text-sm leading-6 muted">Learning version control and working with development environments.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-database"></i></div><h3 class="mt-5 text-xl font-semibold">Databases</h3><p class="mt-2 text-sm leading-6 muted">Studying how applications store, organize, and retrieve information.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">SQL</span><span class="tag">Database concepts</span></div></article>
+          <article class="card p-6 reveal"><div class="icon-box"><i class="fa-solid fa-lightbulb"></i></div><h3 class="mt-5 text-xl font-semibold">Building & learning</h3><p class="mt-2 text-sm leading-6 muted">Learning by experimenting, troubleshooting, documenting, and iterating.</p><div class="mt-4 flex flex-wrap gap-2"><span class="tag">Research</span><span class="tag">Experimentation</span></div></article>
         </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Technical Skills</h2>
-            <div class="max-w-4xl mx-auto space-y-8">
-                <!-- Frontend Skills -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-aurora-green">Frontend Development</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>React / Next.js</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-green to-aurora-blue h-2 rounded-full progress-bar" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>TypeScript</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-blue to-aurora-purple h-2 rounded-full progress-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Tailwind CSS</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-purple to-aurora-pink h-2 rounded-full progress-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Backend Skills -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-aurora-blue">Backend Development</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Node.js / Express</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-green to-aurora-blue h-2 rounded-full progress-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Python / Django</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-blue to-aurora-purple h-2 rounded-full progress-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>PostgreSQL / MongoDB</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-purple to-aurora-pink h-2 rounded-full progress-bar" style="width: 88%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools & Others -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-aurora-purple">Tools & DevOps</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fab fa-docker text-2xl mb-2 text-aurora-green"></i>
-                            <p>Docker</p>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fab fa-aws text-2xl mb-2 text-aurora-blue"></i>
-                            <p>AWS</p>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fab fa-git text-2xl mb-2 text-aurora-purple"></i>
-                            <p>Git</p>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fas fa-infinity text-2xl mb-2 text-aurora-pink"></i>
-                            <p>CI/CD</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="journey" class="section border-y border-white/5 bg-white/[.015]">
+      <div class="wrap grid md:grid-cols-2 gap-12">
+        <div class="reveal"><span class="eyebrow">My background</span><h2 class="section-title mt-5">Education & <span class="gradient">journey.</span></h2><p class="mt-5 leading-7 muted">I’m building my foundation through university studies, structured learning, and personal projects.</p></div>
+        <div class="card p-7 sm:p-9 reveal"><h3 class="text-xl font-semibold mb-7"><i class="fa-solid fa-graduation-cap accent mr-3"></i>Education</h3><div class="timeline"><div class="timeline-item"><p class="text-sm accent font-semibold">Current studies</p><h4 class="mt-1 text-lg font-semibold">B.Sc. Statistics</h4><p class="mt-1 muted">Federal University of Lafia, Nigeria</p><p class="mt-2 text-sm muted">Studying statistics, probability, and quantitative methods.</p></div><div class="timeline-item"><p class="text-sm accent font-semibold">Ongoing</p><h4 class="mt-1 text-lg font-semibold">Software development learning</h4><p class="mt-1 muted">Independent practice and online coursework</p><p class="mt-2 text-sm muted">Developing programming and database fundamentals through practice.</p></div></div></div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-dark-card/30">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Services</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
-                        <i class="fas fa-laptop-code text-2xl text-dark-bg"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-                    <p class="text-gray-400">
-                        Custom web applications built with modern frameworks and best practices for optimal performance.
-                    </p>
-                </div>
-
-                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center">
-                        <i class="fas fa-mobile-alt text-2xl text-dark-bg"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Mobile Development</h3>
-                    <p class="text-gray-400">
-                        Native and cross-platform mobile applications that deliver seamless user experiences.
-                    </p>
-                </div>
-
-                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-purple to-aurora-pink flex items-center justify-center">
-                        <i class="fas fa-palette text-2xl text-dark-bg"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
-                    <p class="text-gray-400">
-                        Beautiful, intuitive interfaces designed with user experience at the forefront.
-                    </p>
-                </div>
-
-                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-pink to-aurora-green flex items-center justify-center">
-                        <i class="fas fa-cloud text-2xl text-dark-bg"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
-                    <p class="text-gray-400">
-                        Scalable cloud architecture and deployment strategies for modern applications.
-                    </p>
-                </div>
-
-                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-green to-aurora-purple flex items-center justify-center">
-                        <i class="fas fa-chart-line text-2xl text-dark-bg"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Consulting</h3>
-                    <p class="text-gray-400">
-                        Technical consulting and strategic planning for digital transformation initiatives.
-                    </p>
-                </div>
-
-                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-pink flex items-center justify-center">
-                        <i class="fas fa-cogs text-2xl text-dark-bg"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">API Integration</h3>
-                    <p class="text-gray-400">
-                        Seamless third-party API integrations and custom API development.
-                    </p>
-                </div>
-            </div>
+    <section id="projects" class="section">
+      <div class="wrap">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 reveal"><div><span class="eyebrow">Selected work</span><h2 class="section-title mt-5">Projects I'm <span class="gradient">building.</span></h2><p class="mt-4 max-w-2xl leading-7 muted">A selection of personal projects and experiments. Some are works in progress, and I’ll add more as they become ready to share.</p></div><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="btn btn-outline self-start">View GitHub <i class="fa-brands fa-github"></i></a></div>
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="card p-6 flex flex-col reveal"><div class="flex items-center justify-between"><div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div><span class="tag">Bot project</span></div><h3 class="mt-5 text-xl font-semibold">JentleBot</h3><p class="mt-3 text-sm leading-6 muted flex-1">A WhatsApp bot project exploring automation, bot features, and JavaScript-based development.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Node.js</span><span class="tag">JavaScript</span></div><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold accent">Explore on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+          <article class="card p-6 flex flex-col reveal"><div class="flex items-center justify-between"><div class="icon-box"><i class="fa-solid fa-book-open"></i></div><span class="tag">Web project</span></div><h3 class="mt-5 text-xl font-semibold">Jenpedia</h3><p class="mt-3 text-sm leading-6 muted flex-1">A micro-app idea focused on useful information and web-based tools.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Web</span><span class="tag">Product idea</span></div><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold accent">Explore on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+          <article class="card p-6 flex flex-col reveal"><div class="flex items-center justify-between"><div class="icon-box"><i class="fa-solid fa-globe"></i></div><span class="tag">Portfolio</span></div><h3 class="mt-5 text-xl font-semibold">Jentle.me</h3><p class="mt-3 text-sm leading-6 muted flex-1">My personal website for documenting my learning journey, interests, and future projects.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div><a href="https://jentle.me" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold accent">You're here <i class="fa-solid fa-arrow-right"></i></a></article>
         </div>
+        <p class="mt-5 text-xs muted">Project descriptions reflect current interests and learning work. Add direct repository links when each project has a public repository.</p>
+      </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Portfolio</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
-                    <div class="h-48 bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-6xl text-dark-bg"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
-                        <p class="text-gray-400 mb-4">Full-stack e-commerce solution with payment integration</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">React</span>
-                            <span class="px-2 py-1 bg-aurora-blue/20 text-aurora-blue rounded text-xs">Node.js</span>
-                            <span class="px-2 py-1 bg-aurora-purple/20 text-aurora-purple rounded text-xs">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
-                    <div class="h-48 bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center">
-                        <i class="fas fa-users text-6xl text-dark-bg"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Social Media Dashboard</h3>
-                        <p class="text-gray-400 mb-4">Analytics dashboard for social media management</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">Vue.js</span>
-                            <span class="px-2 py-1 bg-aurora-blue/20 text-aurora-blue rounded text-xs">Python</span>
-                            <span class="px-2 py-1 bg-aurora-purple/20 text-aurora-purple rounded text-xs">PostgreSQL</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
-                    <div class="h-48 bg-gradient-to-br from-aurora-purple to-aurora-pink flex items-center justify-center">
-                        <i class="fas fa-gamepad text-6xl text-dark-bg"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Gaming Platform</h3>
-                        <p class="text-gray-400 mb-4">Real-time multiplayer gaming platform</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">Next.js</span>
-                            <span class="px-2 py-1 bg-aurora-blue/20 text-aurora-blue rounded text-xs">Socket.io</span>
-                            <span class="px-2 py-1 bg-aurora-purple/20 text-aurora-purple rounded text-xs">Redis</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="contact" class="section border-t border-white/5 bg-white/[.015]">
+      <div class="wrap">
+        <div class="card p-8 sm:p-12 lg:p-16 grid md:grid-cols-[1fr_auto] gap-8 items-center reveal">
+          <div><span class="eyebrow">Say hello</span><h2 class="section-title mt-5">Have an idea? <span class="gradient">Let's connect.</span></h2><p class="mt-5 max-w-2xl leading-7 muted">I'm open to connecting with fellow learners, developers, and people interested in technology, programming, or data. Reach out through GitHub for now.</p></div>
+          <a href="https://github.com/josephitodo" target="_blank" rel="noreferrer" class="btn btn-primary whitespace-nowrap">Connect on GitHub <i class="fa-brands fa-github"></i></a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-dark-card/30">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Client Testimonials</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-                <div class="bg-dark-card p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center text-xl font-bold text-dark-bg">
-                            JD
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-semibold">John Doe</h4>
-                            <p class="text-sm text-gray-400">CEO, TechStart</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 italic">
-                        "Alex delivered an exceptional product that exceeded our expectations. Their technical expertise
-                        and attention to detail made our project a huge success."
-                    </p>
-                    <div class="mt-4 text-aurora-green">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
+  <footer class="py-7">
+    <div class="wrap flex flex-col sm:flex-row gap-4 items-center justify-between text-sm muted"><a href="#home" class="brand text-xl font-bold text-slate-100">Jentle<span class="accent">.</span></a><p>© <span id="year"></span> Joseph Itodo. Built with curiosity and code.</p><div class="flex gap-5"><a href="https://github.com/josephitodo" target="_blank" rel="noreferrer">GitHub</a><a href="#home">Back to top ↑</a></div></div>
+  </footer>
 
-                <div class="bg-dark-card p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center text-xl font-bold text-dark-bg">
-                            SM
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-semibold">Sarah Miller</h4>
-                            <p class="text-sm text-gray-400">Product Manager, InnovateCo</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 italic">
-                        "Working with Alex was a fantastic experience. They brought our vision to life with
-                        creativity and technical excellence."
-                    </p>
-                    <div class="mt-4 text-aurora-blue">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Latest Blog Posts</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-aurora-green to-aurora-blue"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-400 mb-2">March 15, 2024</div>
-                        <h3 class="text-xl font-semibold mb-3">The Future of Web Development</h3>
-                        <p class="text-gray-400 mb-4">
-                            Exploring emerging trends and technologies shaping the future of web development...
-                        </p>
-                        <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                            Read More →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-aurora-blue to-aurora-purple"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-400 mb-2">March 10, 2024</div>
-                        <h3 class="text-xl font-semibold mb-3">Building Scalable Applications</h3>
-                        <p class="text-gray-400 mb-4">
-                            Best practices for building applications that scale efficiently with growing demand...
-                        </p>
-                        <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                            Read More →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-aurora-purple to-aurora-pink"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-400 mb-2">March 5, 2024</div>
-                        <h3 class="text-xl font-semibold mb-3">UI/UX Design Principles</h3>
-                        <p class="text-gray-400 mb-4">
-                            Essential design principles for creating user-friendly and aesthetic interfaces...
-                        </p>
-                        <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                            Read More →
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark-card/30">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
-                                <i class="fas fa-envelope text-dark-bg"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Email</p>
-                                <p>hello@jentle.me</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center">
-                                <i class="fas fa-phone text-dark-bg"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Phone</p>
-                                <p>+234 (810) 618-4386</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-purple to-aurora-pink flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-dark-bg"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Location</p>
-                                <p>Nigeria</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green">
-                        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green">
-                        <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green"></textarea>
-                        <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-lg text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 border-t border-dark-border">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-4">
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p class="text-gray-400">
-                © 2026 Joseph Itodo. Built with
-                <a href="https://github.com/OSSPhilippines/freefolio" class="text-aurora-green hover:text-aurora-blue transition">
-                    Freefolio
-                </a>
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileMenu').classList.add('hidden');
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-slide-up');
-                }
-            });
-        }, observerOptions);
-
-        // Observe sections for animation
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden'); menuButton.setAttribute('aria-expanded','false'); menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
